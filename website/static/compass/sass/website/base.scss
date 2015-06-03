@@ -1,0 +1,85 @@
+$bg_white: #fff;
+
+$color_text_menu: #363636;
+
+header#main_header {
+	background-color: $bg_white;
+	@include display-flex;
+	@include flex-wrap( wrap );
+	padding: 1.5em 1%;
+
+	h1 {
+		$box-model: border-box;
+		@include align-items(center);
+		@include flex( 2 0 );
+		@include justify-content(center);
+		margin: 0;
+		max-width: 300px;
+		@include display-flex;
+	}
+
+	a.logo_site {
+		background-image: url( /static/asset/img/site_logo.jpeg );
+		display: inline-block;
+		height: 30px;
+		width: 300px;
+
+		span {
+			display: none;
+		}
+	}
+
+	nav {
+		@include flex( 3 0 );
+		display: inline-block;
+		ul.nav_tab {
+			margin: 0;
+			@include display-flex;
+			@include flex-wrap( wrap );
+			list-style: none;
+
+			& > li {
+				display: inline-block; /* non-flexbox browsers */
+				@include align-items(center);
+				@include display-flex;
+				@include flex( 1 0 );
+				@include justify-content(center);
+				@include flex-wrap( wrap );
+				text-align: center;
+
+				&.active {
+					color: red;
+				}
+				&.active div[class^='border_'] {
+					border-bottom: 1px solid black;
+				}
+
+				a {
+					width: 100%;
+					color: $color_text_menu;
+				}
+
+				button {
+					width: 80%;
+				}
+			}
+		}
+	}
+
+	div.mobile.menu_button{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	div.mobile_menu_btn {
+		background: url(https://d1us95wkqce0jo.cloudfront.net/img/btn-mobile-menu.png)left top no-repeat;
+		cursor: pointer;
+		display: block;
+		float: right;
+		height: 20px;
+		margin: 4px 10px 0 0;
+		text-indent: -8000px;
+		width: 24px;
+	}
+}

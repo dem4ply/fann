@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang= "es" >
+ <html {% block angular_app %}{% endblock %} >
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<link href={% static "css/screen.css"%} media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href={% static "css/print.css"%} media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+			<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		{% block css %}{% endblock %}
+
+		<script language="JavaScript" src={% static "js/bootstrap.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/jquery.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/angular.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/angular-animate.min.js"%}></script>
+		{% block js %}{% endblock %}
+	</head>
+	<body>
+		{% block header %}
+			{% include "header.html" %}
+		{% endblock %}
+		{% block main_content %}{% endblock %}
+		{% block footer %}
+			{% include "footer.html" %}
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,77 @@
+/*
+Error: Undefined mixin 'display-flex'.
+        on line 7 of /home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss, in `display-flex'
+        from line 7 of /home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss
+
+2: 
+3: $color_text_menu: #363636;
+4: 
+5: header#main_header {
+6: 	background-color: $bg_white;
+7: 	@include display-flex;
+8: 	@include flex-wrap( wrap );
+9: 	padding: 1.5em 1%;
+10: 
+11: 	h1 {
+12: 		$box-model: border-box;
+
+Backtrace:
+/home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss:7:in `display-flex'
+/home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss:7
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/home/dem4ply/.gem/ruby/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/home/dem4ply/.gem/ruby/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/home/dem4ply/.gem/ruby/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `call'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/home/dem4ply/.gem/ruby/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'display-flex'.\A         on line 7 of /home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss, in `display-flex'\A         from line 7 of /home/dem4ply/Documentos/programacion/Proyectos/python/django/fann/website/static/compass/sass/website/base.scss\A \A 2: \A 3: $color_text_menu: #363636;\A 4: \A 5: header#main_header {\A 6: 	background-color: $bg_white;\A 7: 	@include display-flex;\A 8: 	@include flex-wrap( wrap );\A 9: 	padding: 1.5em 1%;\A 10: \A 11: 	h1 {\A 12: 		$box-model: border-box;"; }
