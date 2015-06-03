@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% block tittle %}{% endblock %}
+
+{% block main_content %}
+	<aside>
+		<header>
+			<h3>Sign up with a social network</h3>
+			<p>
+				Automatically create your profile
+				(we won't post to your account)
+			</p>
+		</header>
+		<form>
+			<button class="btn btn-default">Facebook</button>
+		</form>
+	</aside>
+	<aside>
+		<heaedr>
+			<h3>Sign up manually</h3>
+		</heaedr>
+		<form>
+			<div class="form-group">
+				<label for="first_name">First_name</label>
+				<input type="text" class="form-control" id="first_name" placeholder="Jonh">
+			</div>
+			<div class="form-group">
+				<label for="last_name">First_name</label>
+				<input type="text" class="form-control" id="last_name" placeholder="Doe">
+			</div>
+			<div class="form-group">
+				<label for="email">First_name</label>
+				<input type="email" class="form-control" id="email" placeholder="john.doe@company.com">
+			</div>
+			<div class="form-group">
+				<label for="password">First_name</label>
+				<input type="password" class="form-control" id="password" placeholder="********">
+			</div>
+		</form>
+	</aside>
+{% endblock %}
