@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang= "es" >
- <html {% block angular_app %}{% endblock %} >
+ <html ng-app={% block angular_app %}{% endblock %} >
 	<head>
 		<title>{% block title %}{% endblock %}</title>
 		<link href={% static "css/screen.css"%} media="screen, projection" rel="stylesheet" type="text/css" />
