@@ -11,10 +11,11 @@
 		<![endif]-->
 		{% block css %}{% endblock %}
 
-		<script language="JavaScript" src={% static "js/bootstrap.min.js"%}></script>
-		<script language="JavaScript" src={% static "js/jquery.min.js"%}></script>
-		<script language="JavaScript" src={% static "js/angular.min.js"%}></script>
-		<script language="JavaScript" src={% static "js/angular-animate.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/lib/bootstrap.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/lib/jquery.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/lib/angular.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/lib/angular-animate.min.js"%}></script>
+		<script language="JavaScript" src={% static "js/lib/angular-resource.min.js"%}></script>
 		{% block js %}{% endblock %}
 	</head>
 	<body>
