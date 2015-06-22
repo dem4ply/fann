@@ -4,7 +4,9 @@
 {% block tittle %}{% endblock %}
 {% block js %}
 	{{ block.super }}
+	<script language="JavaScript" src={% static "js/apps/user/app.js"%}></script>
 	<script language="JavaScript" src={% static "js/apps/user/sign_up/app.js"%}></script>
+	<script language="JavaScript" src={% static "js/apps/user/rest.js"%}></script>
 	<script language="JavaScript" src={% static "js/apps/user/sign_up/controllers.js"%}></script>
 	<script language="JavaScript" src={% static "js/apps/user/sign_up/controllers/sign_up.js"%}></script>
 {% endblock %}

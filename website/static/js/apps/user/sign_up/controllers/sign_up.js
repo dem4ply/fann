@@ -1,8 +1,8 @@
 'use strict';
 angular.module( 'user.sign_up.ctrl' )
 	.controller( 'user.sign_up.ctrl.sign_up',
-	[ '$scope',
-	function( $scope ) {
+	[ '$scope', 'rest.user',
+	function( $scope, rest_user ) {
 		$scope.models = {
 			form: {
 				first_name: '',
@@ -14,6 +14,7 @@ angular.module( 'user.sign_up.ctrl' )
 
 		$scope.on_register_manual = function() {
 			console.log( $scope.models.form );
+			rest_user.save( $scope.models.form );
 		};
 		return $scope;
 	} ] );
