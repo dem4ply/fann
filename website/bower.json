@@ -1,0 +1,21 @@
+{
+  "name": "fann",
+  "version": "0.0.0",
+  "authors": [
+    "dem4ply <dem4ply@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4",
+    "angular-resource": "~1.4.0",
+    "angularjs": "~1.4",
+    "jquery": "~2.1.4"
+  }
+}

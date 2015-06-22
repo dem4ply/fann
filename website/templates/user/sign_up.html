@@ -1,0 +1,57 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% block angular_app %} "user.sign_up" {% endblock %}
+{% block tittle %}{% endblock %}
+{% block js %}
+	{{ block.super }}
+	<script language="JavaScript" src={% static "js/apps/user/app.js"%}></script>
+	<script language="JavaScript" src={% static "js/apps/user/sign_up/app.js"%}></script>
+	<script language="JavaScript" src={% static "js/apps/user/rest.js"%}></script>
+	<script language="JavaScript" src={% static "js/apps/user/sign_up/controllers.js"%}></script>
+	<script language="JavaScript" src={% static "js/apps/user/sign_up/controllers/sign_up.js"%}></script>
+{% endblock %}
+
+{% block main_content %}
+	<div ng-controller="user.sign_up.ctrl.sign_up">
+		<aside>
+			<header>
+				<h3>Sign up with a social network</h3>
+				<p>
+					Automatically create your profile
+					(we won't post to your account)
+				</p>
+			</header>
+			<form>
+				<button class="btn btn-default">Facebook</button>
+			</form>
+		</aside>
+		<aside>
+			<heaedr>
+				<h3>Sign up manually</h3>
+			</heaedr>
+			<form ng-submit="on_register_manual()">
+				<div class="form-group">
+					<label for="first_name">First_name</label>
+					<input type="text" class="form-control" id="first_name" placeholder="Jonh"
+						ng-model="models.form.first_name">
+				</div>
+				<div class="form-group">
+					<label for="last_name">First_name</label>
+					<input type="text" class="form-control" id="last_name" placeholder="Doe"
+						ng-model="models.form.last_name">
+				</div>
+				<div class="form-group">
+					<label for="email">First_name</label>
+					<input type="email" class="form-control" id="email" placeholder="john.doe@company.com"
+						ng-model="models.form.email">
+				</div>
+				<div class="form-group">
+					<label for="password">First_name</label>
+					<input type="password" class="form-control" id="password" placeholder="********"
+						ng-model="models.form.password">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</aside>
+	</div>
+{% endblock %}

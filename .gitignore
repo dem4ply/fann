@@ -176,3 +176,4 @@ __pycache__
 *.sqlite3
 
 manage.py
+tags
