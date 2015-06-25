@@ -6,7 +6,7 @@ from user.models import User
 from django.db import IntegrityError
 import json
 
-def user_api(request):
+def user_api( request ):
 	if request.method == 'GET':
 		return get_all_users( request )
 	elif request.method == 'POST':

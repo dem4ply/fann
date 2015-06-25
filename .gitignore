@@ -177,3 +177,6 @@ __pycache__
 
 manage.py
 tags
+.coverage
+
+*/migrations

@@ -1,31 +1,13 @@
 from django.db import models
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
-
-class UserManager(BaseUserManager):
-	def create_user(self, username, email, password=None):
-		if not email:
-			raise ValueError('Users must have an email address')
-		if not username:
-			raise ValueError('Users must have a username')
-
-		user = self.model( username=username, email=self.normalize_email(email), )
-		user.is_active = True
-		user.set_password(password)
-		user.save(using=self._db)
-		return user
-
-	def create_superuser(self, username, email, password):
-		user = self.create_user(username=username, email=email, password=password)
-		user.is_staff = True
-		user.is_superuser = True
-		user.save(using=self._db)
-		return user
+from user.managers import User_manager
 
 class User( AbstractBaseUser, PermissionsMixin ):
-	alphanumeric = RegexValidator(r'^[0-9a-zA-Z]*$', message='Only alphanumeric characters are allowed.')
+	alphanumeric = RegexValidator(r'^[0-9a-zA-Z]*$',
+		message = "Only alphanumeric characters are allowed." )
 
-	### Redefine the basic fields that would normally be defined in User ###
+	### redefine los campos del modelo user
 	username =    models.CharField( unique=True, max_length=64,
 							validators=[ alphanumeric ] )
 	email =       models.EmailField( verbose_name='email address', unique=True,
@@ -36,23 +18,19 @@ class User( AbstractBaseUser, PermissionsMixin ):
 	is_active =   models.BooleanField( default=True, null=False )
 	is_staff =    models.BooleanField( default=False, null=False )
 
-	### Our own fields ###
-	#profile_image = models.ImageField( upload_to="uploads", blank=False, null=False, default="/static/images/defaultuserimage.png" )
-	#user_bio = models.CharField(max_length=600, blank=True)
-
-	objects = UserManager()
+	objects = User_manager()
 	USERNAME_FIELD = 'email'
-	REQUIRED_FIELDS = ['username']
+	REQUIRED_FIELDS = [ 'username' ]
 
-	def get_full_name(self):
+	def get_full_name( self ):
 		fullname = self.first_name + " " + self.last_name
 		return fullname
 
-	def get_short_name(self):
+	def get_short_name( self ):
 		return self.username
 
-	def __unicode__(self):
+	def __unicode__( self ):
+		return str( self )
+
+	def __str__( self ):
 		return self.email
-
-
-# Create your models here.
