@@ -14,7 +14,8 @@ def user_api( request ):
 	return HttpResponse( request.method )
 
 def get_all_users( request ):
-	result = serializers.serialize( "json", User.objects.all() )
+	all_user = User.objects.all()
+	result = serializers.serialize( "json", all_user )
 	return HttpResponse( result )
 
 def new_user( request ):
